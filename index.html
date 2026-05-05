@@ -3,115 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Studio Hobi</title>
-    <meta name="description" content="Studio Hobi — independent design studio." />
+    <title>Hobi</title>
+    <meta name="description" content="Studio Hobi — a design studio based in New York, run by Nick Simmons and Mara Lookabaugh." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- Fonts: Cormorant Garamond (placeholder for GT Alpina) + Inter (placeholder for Tonka) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-stone-50 text-stone-900 antialiased">
-    <!-- Nav -->
-    <header class="border-b border-stone-200">
-      <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-        <a href="#top" class="text-lg font-semibold tracking-tight">Studio Hobi</a>
-        <ul class="flex gap-6 text-sm text-stone-600">
-          <li><a href="#about" class="hover:text-stone-900">About</a></li>
-          <li><a href="#work" class="hover:text-stone-900">Work</a></li>
-          <li><a href="#contact" class="hover:text-stone-900">Contact</a></li>
-        </ul>
-      </nav>
+  <body class="bg-white text-black antialiased">
+    <!-- Top bar: HOBI wordmark left, tiny nav right.
+         Inner div is left-anchored (no mx-auto) and capped at 1346px so on wide screens
+         the wordmark stays at the left edge and white space grows on the right. -->
+    <header class="pl-[17px] pr-[40px] pt-6 sm:pt-8">
+      <div class="flex max-w-[1346px] items-start justify-between">
+        <h1 class="font-display text-[40px] font-light leading-none tracking-tight sm:text-[54px]">
+          HOBI
+        </h1>
+        <nav class="flex gap-8 pt-3 text-[11px] font-medium leading-[14px]">
+          <a href="#about" class="transition hover:opacity-60">About</a>
+          <a href="mailto:info@studiohobi.com" class="transition hover:opacity-60">info@studiohobi.com</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero -->
-    <section id="top" class="mx-auto max-w-5xl px-6 py-24 sm:py-32">
-      <p class="mb-4 text-sm uppercase tracking-widest text-stone-500">Independent studio</p>
-      <h1 class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-        Quiet, considered work for brands that care about the details.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg text-stone-600">
-        Studio Hobi is a small practice focused on identity, web, and print —
-        helping independent businesses look the way they actually feel.
-      </p>
-      <div class="mt-8 flex gap-4">
-        <a href="#contact" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700">Start a project</a>
-        <a href="#work" class="rounded-full border border-stone-300 px-6 py-3 text-sm font-medium transition hover:border-stone-900">See recent work</a>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="border-t border-stone-200">
-      <div class="mx-auto grid max-w-5xl gap-12 px-6 py-24 sm:grid-cols-2">
-        <div>
-          <p class="text-sm uppercase tracking-widest text-stone-500">About</p>
-          <h2 class="mt-2 text-3xl font-semibold tracking-tight">A small studio, by design.</h2>
+    <!-- Asymmetric staggered image grid.
+         Vertical gaps use clamp(min, vw-based, max) so spacing tightens on narrow viewports. -->
+    <main class="pl-[17px] pr-[40px] pt-16 sm:pt-24">
+      <div class="grid max-w-[1346px] grid-cols-1 gap-x-3 gap-y-16 sm:grid-cols-[44fr_56fr] sm:gap-y-0">
+        <!-- Left column -->
+        <div class="flex flex-col gap-y-[clamp(80px,31vw,450px)]">
+          <figure class="aspect-[579/862] w-full bg-stone-100">
+            <img src="/images/01.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[579/892] w-full bg-stone-100">
+            <img src="/images/03.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[579/797] w-full bg-stone-100">
+            <img src="/images/05.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[579/743] w-full bg-stone-100">
+            <img src="/images/07.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
         </div>
-        <div class="space-y-4 text-stone-700">
-          <p>
-            We work with founders, makers, and small teams on the kind of
-            projects that benefit from focused attention rather than a big
-            agency machine.
-          </p>
-          <p>
-            Every engagement is led directly by the same person you'd meet on a
-            kickoff call. No handoffs, no account managers — just clear
-            thinking and careful craft.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Services / Work -->
-    <section id="work" class="border-t border-stone-200">
-      <div class="mx-auto max-w-5xl px-6 py-24">
-        <p class="text-sm uppercase tracking-widest text-stone-500">What we do</p>
-        <h2 class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight">Three things, done well.</h2>
-
-        <div class="mt-12 grid gap-8 sm:grid-cols-3">
-          <div class="rounded-2xl border border-stone-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Identity</h3>
-            <p class="mt-2 text-stone-600">
-              Logos, type systems, and the small visual decisions that make a
-              brand feel coherent.
-            </p>
-          </div>
-          <div class="rounded-2xl border border-stone-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Web</h3>
-            <p class="mt-2 text-stone-600">
-              Fast, hand-built sites that load instantly and read clearly on
-              any device.
-            </p>
-          </div>
-          <div class="rounded-2xl border border-stone-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Print</h3>
-            <p class="mt-2 text-stone-600">
-              Books, packaging, and collateral with an eye toward materials
-              and longevity.
-            </p>
-          </div>
+        <!-- Right column — top offset on desktop creates the staggered rhythm.
+             Both gap and offset use clamp() so they scale with viewport width. -->
+        <div class="flex flex-col gap-y-[clamp(80px,31vw,450px)] sm:pt-[clamp(120px,44vw,640px)]">
+          <figure class="aspect-[738/570] w-full bg-stone-100">
+            <img src="/images/02.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[738/1011] w-full bg-stone-100">
+            <img src="/images/04.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[738/648] w-full bg-stone-100">
+            <img src="/images/06.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
+          <figure class="aspect-[738/1096] w-full bg-stone-100">
+            <img src="/images/08.jpg" alt="" class="h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+          </figure>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Contact -->
-    <section id="contact" class="border-t border-stone-200 bg-stone-100">
-      <div class="mx-auto max-w-5xl px-6 py-24 text-center">
-        <p class="text-sm uppercase tracking-widest text-stone-500">Contact</p>
-        <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Have a project in mind?
+    <!-- About — anchor target for the nav link. scroll-mt offsets the snap-to position. -->
+    <section id="about" class="scroll-mt-8 pl-[17px] pr-[40px] pt-32 sm:pt-48">
+      <div class="max-w-[640px]">
+        <h2 class="font-display text-[32px] font-light leading-none tracking-tight sm:text-[40px]">
+          About
         </h2>
-        <p class="mx-auto mt-4 max-w-xl text-stone-600">
-          We take on a small number of projects each quarter. Drop a line and
-          we'll be in touch within a few days.
+        <p class="mt-6 text-[15px] leading-[1.6] sm:text-base">
+          Studio Hobi is a design studio based in New York and is run by Nick Simmons and Mara Lookabaugh.
         </p>
-        <a href="mailto:hello@studiohobi.com" class="mt-8 inline-block rounded-full bg-stone-900 px-8 py-3 text-sm font-medium text-white transition hover:bg-stone-700">
-          hello@studiohobi.com
-        </a>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-stone-200">
-      <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-6 py-8 text-sm text-stone-500 sm:flex-row">
+    <!-- Footer — left-anchored to the same gutter, no top border. -->
+    <footer class="mt-32 pb-10 pl-[17px] pr-[40px] pt-10 sm:pb-14 sm:pt-14">
+      <div class="flex max-w-[1346px] flex-col items-start justify-between gap-4 text-[11px] font-medium leading-[14px] sm:flex-row sm:items-end">
         <p>&copy; <span id="year"></span> Studio Hobi</p>
-        <p>Made with care.</p>
+        <div class="flex gap-8">
+          <a href="mailto:info@studiohobi.com" class="transition hover:opacity-60">info@studiohobi.com</a>
+          <a href="https://instagram.com/studiohobi" class="transition hover:opacity-60" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </footer>
 
