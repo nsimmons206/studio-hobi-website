@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Hobi</title>
+    <meta name="description" content="Studio Hobi — independent design studio." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body class="bg-stone-50 text-stone-900 antialiased">
+    <!-- Nav -->
+    <header class="border-b border-stone-200">
+      <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+        <a href="#top" class="text-lg font-semibold tracking-tight">Studio Hobi</a>
+        <ul class="flex gap-6 text-sm text-stone-600">
+          <li><a href="#about" class="hover:text-stone-900">About</a></li>
+          <li><a href="#work" class="hover:text-stone-900">Work</a></li>
+          <li><a href="#contact" class="hover:text-stone-900">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+      <p class="mb-4 text-sm uppercase tracking-widest text-stone-500">Independent studio</p>
+      <h1 class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+        Quiet, considered work for brands that care about the details.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-stone-600">
+        Studio Hobi is a small practice focused on identity, web, and print —
+        helping independent businesses look the way they actually feel.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="#contact" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700">Start a project</a>
+        <a href="#work" class="rounded-full border border-stone-300 px-6 py-3 text-sm font-medium transition hover:border-stone-900">See recent work</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="border-t border-stone-200">
+      <div class="mx-auto grid max-w-5xl gap-12 px-6 py-24 sm:grid-cols-2">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-stone-500">About</p>
+          <h2 class="mt-2 text-3xl font-semibold tracking-tight">A small studio, by design.</h2>
+        </div>
+        <div class="space-y-4 text-stone-700">
+          <p>
+            We work with founders, makers, and small teams on the kind of
+            projects that benefit from focused attention rather than a big
+            agency machine.
+          </p>
+          <p>
+            Every engagement is led directly by the same person you'd meet on a
+            kickoff call. No handoffs, no account managers — just clear
+            thinking and careful craft.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Work -->
+    <section id="work" class="border-t border-stone-200">
+      <div class="mx-auto max-w-5xl px-6 py-24">
+        <p class="text-sm uppercase tracking-widest text-stone-500">What we do</p>
+        <h2 class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight">Three things, done well.</h2>
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-3">
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h3 class="text-lg font-semibold">Identity</h3>
+            <p class="mt-2 text-stone-600">
+              Logos, type systems, and the small visual decisions that make a
+              brand feel coherent.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h3 class="text-lg font-semibold">Web</h3>
+            <p class="mt-2 text-stone-600">
+              Fast, hand-built sites that load instantly and read clearly on
+              any device.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h3 class="text-lg font-semibold">Print</h3>
+            <p class="mt-2 text-stone-600">
+              Books, packaging, and collateral with an eye toward materials
+              and longevity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-stone-200 bg-stone-100">
+      <div class="mx-auto max-w-5xl px-6 py-24 text-center">
+        <p class="text-sm uppercase tracking-widest text-stone-500">Contact</p>
+        <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+          Have a project in mind?
+        </h2>
+        <p class="mx-auto mt-4 max-w-xl text-stone-600">
+          We take on a small number of projects each quarter. Drop a line and
+          we'll be in touch within a few days.
+        </p>
+        <a href="mailto:hello@studiohobi.com" class="mt-8 inline-block rounded-full bg-stone-900 px-8 py-3 text-sm font-medium text-white transition hover:bg-stone-700">
+          hello@studiohobi.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200">
+      <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-6 py-8 text-sm text-stone-500 sm:flex-row">
+        <p>&copy; <span id="year"></span> Studio Hobi</p>
+        <p>Made with care.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
