@@ -9,11 +9,11 @@
       "caption": "Sample House design library - design and build out."
     },
     {
-      "image": "/images/09.jpg",
-      "caption": ""
+      "image": "/images/softservices_cubby_01.webp",
+      "caption": "Soft Services - Custom Office Furniture in birch plywood and Douglas fir."
     },
     {
-      "image": "/images/10.jpg",
+      "image": "/images/softservices_deskrow_02.webp",
       "caption": ""
     },
     {
@@ -39,6 +39,10 @@
     {
       "image": "/images/08.jpg",
       "caption": "Double bench and wood storage."
+    },
+    {
+      "image": "/images/10.jpg",
+      "caption": ""
     }
   ]
 }
