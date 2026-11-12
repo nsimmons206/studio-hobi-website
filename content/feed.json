@@ -1,20 +1,20 @@
 {
   "images": [
     {
-      "image": "/images/01.jpg",
-      "caption": "Field stool in Ash."
-    },
-    {
-      "image": "/images/02.jpg",
-      "caption": "Sample House design library - design and build out."
-    },
-    {
       "image": "/images/softservices_cubby_01.webp",
       "caption": "Soft Services Office Design- Custom Desk and bag cubby in birch plywood and douglas fir."
     },
     {
       "image": "/images/softservices_deskrow_02.webp",
       "caption": "Soft Services Office Design- Custom Desks in birch plywood and douglas fir"
+    },
+    {
+      "image": "/images/01.jpg",
+      "caption": "Field stool in Ash."
+    },
+    {
+      "image": "/images/02.jpg",
+      "caption": "Sample House design library - design and build out."
     },
     {
       "image": "/images/03.jpg",
@@ -29,12 +29,12 @@
       "caption": "Wuthering side table in contrast stained white oak."
     },
     {
-      "image": "/images/11.jpg",
-      "caption": "Coffee cabinet and below-counter storage for private residence in stained white oak"
-    },
-    {
       "image": "/images/coffecabinet_01.webp",
       "caption": "Coffee cabinet in stained white oak"
+    },
+    {
+      "image": "/images/11.jpg",
+      "caption": "Coffee cabinet and below-counter storage for private residence in stained white oak"
     },
     {
       "image": "/images/07.jpg",
