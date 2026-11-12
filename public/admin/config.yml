@@ -1,0 +1,60 @@
+# Studio Hobi — content manager settings (Sveltia CMS).
+# Open https://studiohobi.com/admin/ to use it. Saving there commits to this GitHub repo,
+# and Netlify then rebuilds the site, the same as pushing from GitHub Desktop.
+
+backend:
+  name: github
+  repo: nsimmons206/studio-hobi-website
+  branch: main
+  # Sign in with a GitHub personal access token. This needs no extra login server.
+  auth_methods: [token]
+  commit_messages:
+    update: 'Update website images'
+    uploadMedia: 'Upload {{path}}'
+    deleteMedia: 'Delete {{path}}'
+
+# Where uploaded photos are saved in the repo, and the web path the site uses for them.
+media_folder: public/images
+public_folder: /images
+
+media_libraries:
+  default:
+    config:
+      # Tidy the file name: "IMG 0412 (1).JPG" becomes "img-0412-1.webp".
+      slugify_filename: true
+      # Shrink photos in the browser before they are saved, so a 14 MB camera file
+      # becomes a web-sized file (longest side 1800 px, WebP, quality 85).
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1800
+          height: 1800
+
+collections:
+  - name: site
+    label: Website
+    files:
+      - name: feed
+        label: Image feed
+        file: content/feed.json
+        fields:
+          - label: Images
+            name: images
+            widget: list
+            label_singular: image
+            hint: >-
+              Drag to reorder. The first image sits at the top left, and the images
+              alternate left and right going down the page.
+            collapsed: true
+            add_to_top: false
+            thumbnail: image
+            summary: '{{fields.caption}}'
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Caption (shows when hovering over the image)
+                name: caption
+                widget: string
+                required: false
