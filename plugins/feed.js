@@ -7,6 +7,10 @@
 // writes the <figure> markup into index.html where the <!-- FEED_ITEMS --> comment is. It runs
 // every time the site is built (and in `npm run dev`), so new or reordered photos space
 // themselves correctly whatever their shape.
+//
+// Captions: on phones they always show under the photo, left-aligned with the same side margins
+// as the rest of the page (a photo with no caption shows nothing). On desktop they are centred
+// and appear when you hover over the photo.
 import fs from 'node:fs'
 import path from 'node:path'
 import { imageSize } from 'image-size'
@@ -68,7 +72,7 @@ function figure(p, side, mt, first) {
   const style = first ? '' : ` style="--mt:${(mt * 100).toFixed(2)}cqw"`
   return `        <figure class="group feed-item feed-${side}"${style}>
           <img src="${esc(p.src)}" alt="" width="${p.width}" height="${p.height}" class="block h-auto w-full" loading="lazy" onerror="this.style.display='none'" />
-          <figcaption class="mt-3 hidden text-center text-[11px] font-medium leading-[14px] text-stone-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100 sm:block">${esc(p.caption)}</figcaption>
+          <figcaption class="mt-3 block pl-[17px] pr-[40px] text-left text-[11px] font-medium leading-[14px] text-stone-500 transition-opacity duration-200 empty:hidden sm:empty:block sm:pl-0 sm:pr-0 sm:text-center sm:opacity-0 sm:group-hover:opacity-100">${esc(p.caption)}</figcaption>
         </figure>
 `
 }
